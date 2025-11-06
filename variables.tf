@@ -1,11 +1,24 @@
-variable "ami_value" {
-    description = "value for the ami"
+variable "instance_list" {
+    type = string
+    description = "aws instance type"
 }
 
-variable "instance_type_value" {
-    description = "value for instance_type"
+variable "s3" {
+   type = string
+   description = "creating S3 bucket"
 }
 
-variable "subnet_id_value" {
-    description = "value for the subnet_id"
+variable "subnet" {
+  type = list(string)
+  description = "for creating in multi az"
 }
+
+variable "ami" {
+  type = list(string)
+}
+
+
+variable "security" {
+   type = list(string)
+}
+
